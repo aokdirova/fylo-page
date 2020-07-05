@@ -312,19 +312,19 @@ html {
  .triangle-container{
   bottom: 0;
   right: 0;
-  position: relative;
+  position: absolute;
  }
 
   .triangle::before {
     content: "";
-    width: 0px;
+    width: 0;
     height: 0;
-    position: absolute;
-    border-left: 20px solid transparent;
+    border-left: 10px solid transparent;
     border-right: 20px solid var(--pale-blue);
     border-top: 20px solid var(--pale-blue);
     border-bottom: 20px solid transparent;
     transform: translate(-30%, 20%);
+    
   }
 
 }
