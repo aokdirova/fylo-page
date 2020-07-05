@@ -162,7 +162,9 @@ html {
 }
     body {
         background-image: url("/images/bg-desktop.png");
-    
+        background-size: 100% 50%;
+        background-repeat: no-repeat;
+        background-position: bottom;
       }
 
       
@@ -307,16 +309,22 @@ html {
       color: var(--grayish-blue);
   }
 
- 
+ .triangle-container{
+  bottom: 0;
+  right: 0;
+  position: relative;
+ }
 
-  .triangle {
-      width: 0px;
-      height: 0px;
-     border-left: 20px solid transparent;
-     border-right: 20px solid var(--pale-blue);
-     border-top: 20px solid var(--pale-blue);
-     border-bottom: 20px solid transparent;
-     transform: translate(-329%, -150%);
+  .triangle::before {
+    content: "";
+    width: 0px;
+    height: 0;
+    position: absolute;
+    border-left: 20px solid transparent;
+    border-right: 20px solid var(--pale-blue);
+    border-top: 20px solid var(--pale-blue);
+    border-bottom: 20px solid transparent;
+    transform: translate(-30%, 20%);
   }
 
 }
